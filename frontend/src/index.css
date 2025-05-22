@@ -76,7 +76,7 @@ button {
 
 /* Save button (primary) */
 button.save {
-  background-color: #3b82f6; /* blue */
+  background-color: blue; /* blue */
 }
 
 button.save:hover {
@@ -85,13 +85,13 @@ button.save:hover {
 }
 
 button.save:active {
-  background-color: #1d4ed8;
+  background-color: blue;
   transform: translateY(0);
 }
 
 /* Edit button (warning) */
 button.edit {
-  background-color: #f59e0b; /* amber */
+  background-color: blue; /* amber */
 }
 
 button.edit:hover {
