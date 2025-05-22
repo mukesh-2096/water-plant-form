@@ -1,0 +1,173 @@
+/* @import "tailwindcss"; */
+
+/* Reset and base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f0f4f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Container */
+.container {
+  max-width: 600px;
+  background: #ffffff;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h2, h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+/* Inputs and select */
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #f0f9ff;
+}
+
+/* Button base */
+button {
+  cursor: pointer;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  color: white;
+  user-select: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-right: 0.75rem;
+}
+
+/* Save button (primary) */
+button.save {
+  background-color: #3b82f6; /* blue */
+}
+
+button.save:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+button.save:active {
+  background-color: #1d4ed8;
+  transform: translateY(0);
+}
+
+/* Edit button (warning) */
+button.edit {
+  background-color: #f59e0b; /* amber */
+}
+
+button.edit:hover {
+  background-color: #b45309;
+  transform: translateY(-2px);
+}
+
+button.edit:active {
+  background-color: #92400e;
+  transform: translateY(0);
+}
+
+/* Delete button (danger) */
+button.delete {
+  background-color: #ef4444; /* red */
+}
+
+button.delete:hover {
+  background-color: #b91c1c;
+  transform: translateY(-2px);
+}
+
+button.delete:active {
+  background-color: #7f1d1d;
+  transform: translateY(0);
+}
+
+/* Customer Card */
+.customer-card {
+  background: #e0e7ff;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 3px 10px rgba(99, 102, 241, 0.15);
+}
+
+.customer-card > div:first-child {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.customer-card > div:first-child strong {
+  font-size: 1.1rem;
+}
+
+.customer-card > div:last-child {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .customer-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .customer-card > div:last-child {
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  button {
+    width: 100%;
+    margin: 0.3rem 0;
+    margin-right: 0;
+  }
+}
