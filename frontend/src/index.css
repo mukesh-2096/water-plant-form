@@ -39,21 +39,48 @@ input, select {
   box-sizing: border-box;
 }
 
-.btn-save {
-  width: 100%;
-  padding: 0.8rem;
-  background-color: #007bff;
-  color: white;
+/* Button Styles */
+button {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
   border: none;
   border-radius: 8px;
+  padding: 0.6rem 1rem;
   font-size: 1rem;
-  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Save Button */
+.btn-save {
+  width: 100%;
+  background-color: #28a745; /* Green */
+  color: white;
   margin-bottom: 1rem;
-  transition: background-color 0.3s ease;
 }
 
 .btn-save:hover {
-  background-color: #0056b3;
+  background-color: #218838;
+}
+
+/* Edit Button */
+.btn-edit {
+  background-color: #ffc107; /* Yellow */
+  color: black;
+  margin-right: 0.5rem;
+}
+
+.btn-edit:hover {
+  background-color: #e0a800;
+}
+
+/* Delete Button */
+.btn-delete {
+  background-color: #dc3545; /* Red */
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #c82333;
 }
 
 .customer-card {
@@ -70,26 +97,6 @@ input, select {
 .customer-card > div:first-child {
   flex: 1 1 100%;
   margin-bottom: 0.5rem;
-}
-
-.btn-edit,
-.btn-delete {
-  margin-left: 0.5rem;
-  padding: 0.4rem 0.8rem;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  cursor: pointer;
-}
-
-.btn-edit {
-  background-color: #ffc107;
-  color: white;
-}
-
-.btn-delete {
-  background-color: #dc3545;
-  color: white;
 }
 
 /* Responsive Styles */
@@ -111,7 +118,7 @@ input, select {
 
   .btn-edit,
   .btn-delete {
-    margin: 0.3rem 0 0 0;
+    margin: 0.3rem 0;
     width: 100%;
   }
 
