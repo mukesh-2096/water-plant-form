@@ -1,173 +1,125 @@
-/* @import "tailwindcss"; */
-
-/* Reset and base */
-* {
-  box-sizing: border-box;
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-  margin: 0;
-  background: #f0f4f8;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+  text-align: center;
   color: #333;
 }
 
-/* Container */
-.container {
-  max-width: 600px;
-  background: #ffffff;
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-/* Headings */
-h2, h3 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #1e293b;
-}
-
-/* Form group */
 .form-group {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.2rem;
 }
 
-.form-group label {
+label {
   display: block;
-  margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #475569;
+  margin-bottom: 0.4rem;
 }
 
-/* Inputs and select */
-.form-group input,
-.form-group select {
+input, select {
   width: 100%;
-  padding: 0.6rem 1rem;
-  border: 2px solid #cbd5e1;
-  border-radius: 8px;
+  padding: 0.7rem;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
-.form-group input:focus,
-.form-group select:focus {
-  outline: none;
-  border-color: #2563eb;
-  background-color: #f0f9ff;
-}
-
-/* Button base */
-button {
-  cursor: pointer;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.1s ease;
+.btn-save {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #007bff;
   color: white;
-  user-select: none;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  margin-right: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-/* Save button (primary) */
-button.save {
-  background-color: blue; /* blue */
+.btn-save:hover {
+  background-color: #0056b3;
 }
 
-button.save:hover {
-  background-color: #2563eb;
-  transform: translateY(-2px);
-}
-
-button.save:active {
-  background-color: blue;
-  transform: translateY(0);
-}
-
-/* Edit button (warning) */
-button.edit {
-  background-color: blue; /* amber */
-}
-
-button.edit:hover {
-  background-color: #b45309;
-  transform: translateY(-2px);
-}
-
-button.edit:active {
-  background-color: #92400e;
-  transform: translateY(0);
-}
-
-/* Delete button (danger) */
-button.delete {
-  background-color: #ef4444; /* red */
-}
-
-button.delete:hover {
-  background-color: #b91c1c;
-  transform: translateY(-2px);
-}
-
-button.delete:active {
-  background-color: #7f1d1d;
-  transform: translateY(0);
-}
-
-/* Customer Card */
 .customer-card {
-  background: #e0e7ff;
-  padding: 1rem 1.5rem;
-  margin-top: 1rem;
-  border-radius: 12px;
   display: flex;
   justify-content: space-between;
+  background-color: #f2f2f2;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
   align-items: center;
   flex-wrap: wrap;
-  box-shadow: 0 3px 10px rgba(99, 102, 241, 0.15);
 }
 
 .customer-card > div:first-child {
-  font-weight: 600;
-  color: #1e293b;
+  flex: 1 1 100%;
+  margin-bottom: 0.5rem;
 }
 
-.customer-card > div:first-child strong {
-  font-size: 1.1rem;
+.btn-edit,
+.btn-delete {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
 }
 
-.customer-card > div:last-child {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 0;
+.btn-edit {
+  background-color: #ffc107;
+  color: white;
 }
 
-/* Responsive */
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Responsive Styles */
 @media (max-width: 600px) {
   .container {
-    margin: 1rem;
-    padding: 1.5rem;
+    margin: 15px;
+    padding: 1rem;
   }
-  
+
+  input, select, .btn-save {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
   .customer-card {
     flex-direction: column;
     align-items: flex-start;
   }
-  
-  .customer-card > div:last-child {
-    margin-top: 1rem;
+
+  .btn-edit,
+  .btn-delete {
+    margin: 0.3rem 0 0 0;
     width: 100%;
-    justify-content: flex-start;
   }
-  
-  button {
+
+  .customer-card > div {
     width: 100%;
-    margin: 0.3rem 0;
-    margin-right: 0;
+  }
+
+  h2, h3 {
+    font-size: 1.5rem;
   }
 }
