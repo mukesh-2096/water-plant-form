@@ -18,7 +18,7 @@ const CustomerForm = () => {
   }, []);
 
   const fetchCustomers = async () => {
-    const res = await axios.get('http://localhost:5000/customers');
+    const res = await axios.get('https://water-plant-form.onrender.com/customers');
     setCustomers(res.data);
   };
 
@@ -34,9 +34,9 @@ const CustomerForm = () => {
     };
 
     if (editingId) {
-      await axios.put(`http://localhost:5000/customers/${editingId}`, payload);
+      await axios.put(`https://water-plant-form.onrender.com/customers/${editingId}`, payload);
     } else {
-      await axios.post('http://localhost:5000/customers', payload);
+      await axios.post('https://water-plant-form.onrender.com/customers', payload);
     }
 
     setForm({ name: '', bottleCount: '', cost: '', paymentStatus: 'Unpaid' });
@@ -51,7 +51,7 @@ const CustomerForm = () => {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/customers/${id}`);
+    await axios.delete(`https://water-plant-form.onrender.com/customers/${id}`);
     fetchCustomers();
   };
 
